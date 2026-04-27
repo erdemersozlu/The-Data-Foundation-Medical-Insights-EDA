@@ -1,51 +1,57 @@
-# 🩺 The Data Foundation: Health Insurance EDA
-> **"Anchored to Data"** — *An Exploratory Data Analysis project focused on data integrity and insights.*
+# 🩺 The Data Foundation: Heart Disease Insights
+> **"Anchored to Data"** — *A meticulous Exploratory Data Analysis (EDA) on cardiovascular health records.*
 
 ## 📌 Overview
-Before diving into complex machine learning models or quantum algorithms, one must master the data itself. This project, **The Data Foundation**, serves as the bedrock of my data science journey. It focuses on the crucial phase of **Exploratory Data Analysis (EDA)**, where raw medical insurance data is cleaned, analyzed, and transformed into actionable insights.
+This project, **The Data Foundation**, is the first milestone of my data science journey. Inspired by Francesco's philosophy, I focused on mastering the "raw truth" of the data before building predictive models. Using a dataset of 1,025 patients, I performed rigorous cleaning and statistical analysis to uncover the key factors behind heart disease.
 
-The goal is simple: to prove that high-quality insights come from high-quality data handling.
+The goal was to transform a flat CSV file into a structured, visual, and model-ready "fuel" for the next stage: **The Linear Engine**.
+
+## 📊 Dataset Structure
+The project uses the `heart.csv` dataset, which contains 14 clinical features:
+* **Demographics:** Age, Sex.
+* **Clinical Data:** Chest Pain Type (cp), Resting Blood Pressure (trestbps), Cholesterol (chol), etc.
+* **Target:** Heart Disease Diagnosis (0 = Healthy, 1 = Disease).
 
 ## 🛠️ Tech Stack
-* **Language:** Python 3.x
-* **Libraries:** * `Pandas` (Data manipulation & cleaning)
-    * `Matplotlib` & `Seaborn` (Data visualization)
-    * `NumPy` (Numerical operations)
+* **Python 3.x**
+* **Pandas:** Data cleaning and structure validation.
+* **Seaborn & Matplotlib:** Statistical visualizations and correlation heatmaps.
+* **NumPy:** Mathematical summaries.
 
-## 🔍 The Workflow
+## 🔍 Key EDA Milestones
 
-### 1. Data Cleaning & Pre-processing
-* **Integrity Check:** Handled missing values and verified data types to ensure a "clean slate."
-* **String Manipulation:** Applied `strip()` and `split` logic via Pandas vectorized methods to normalize categorical columns.
-* **Outlier Detection:** Used Boxplots to identify extreme values in BMI and Insurance Charges.
+### 1. Data Check-up & Cleaning
+* Verified 1,025 records with no missing values.
+* Conducted structural analysis using `df.info()` and `df.shape`.
+* Ensured data types are optimized for mathematical processing.
 
-### 2. Statistical Insights
-* **Univariate Analysis:** Examined the distribution of age, BMI, and smoking habits.
-* **Multivariate Analysis:** Explored the relationship between lifestyle choices (smoking) and financial outcomes (insurance charges).
-* **Correlation Mapping:** Generated a heatmap to visualize the mathematical bond between different features.
+### 2. Statistical Visualization
+* **Age Distribution:** Identified the core patient demographic through Histograms.
+* **Health Correlations:** Discovered the inverse relationship between **Age** and **Max Heart Rate (thalach)** using Scatter Plots.
+* **Comparative Analysis:** Used Boxplots to visualize how **Cholesterol** levels vary between healthy and diagnosed groups.
 
-## 📊 Key Findings
-* **The Smoker Effect:** Smoking status is the strongest predictor of high insurance costs, showing a massive gap compared to non-smokers.
-* **BMI & Charges:** A positive correlation exists between Body Mass Index and medical expenses, especially in the high-risk segments.
-* **Data Readiness:** The dataset is now normalized and ready for the next phase: **The Linear Engine** (Linear Regression modeling).
+### 3. Preparation for Machine Learning
+* Generated a comprehensive statistical summary with `df.describe().T`.
+* Validated feature scales to determine the need for normalization in the upcoming **Linear Engine** phase.
+
+
 
 ## 🚀 How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/the-data-foundation.git
+   git clone https://github.com/erdemersozlu/The-Data-Foundation-Medical-Insights-EDA
    ```
-2. Install dependencies:
+2. Install requirements:
    ```bash
    pip install pandas seaborn matplotlib
    ```
-3. Open the Jupyter Notebook:
+3. Run the analysis:
    ```bash
-   jupyter notebook notebooks/Exploratory_Data_Analysis.ipynb
+   jupyter notebook notebooks/EDA_Analysis.ipynb
    ```
 
 ## 📜 Conclusion
-Mastering the foundation is not just about writing code; it's about understanding the "truth" hidden in the rows and columns. As Francesco says, staying **anchored to data** ensures that every subsequent model we build is grounded in reality.
+Mastering the foundation proved that data is not just numbers; By staying **anchored to data**, we've identified that factors like `thalach` and `cp` are crucial indicators. 
 
----
 
-Bu taslakta değiştirmek istediğin veya eklememi istediğin özel bir bölüm var mı?
+
